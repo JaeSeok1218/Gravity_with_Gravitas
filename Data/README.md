@@ -4,7 +4,7 @@ Since there is no available online resource to replicate [Anderson and van Winco
 
 ## Overall Trade network
 
-<img src="images/trade_network_corrected.png" alt="Figure 1: GDP and Trade Network" width="700">
+<img src="images/figure_network.png" alt="Figure 1: GDP and Trade Network" width="900">
 
 ## Data Construction
 
