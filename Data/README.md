@@ -2,6 +2,10 @@
 
 Since there is no available online resource to replicate [Anderson and van Wincoop(2003)](https://www.aeaweb.org/articles?id=10.1257/000282803321455214), I constructed a synthetic data with the estimates of the paper $a_{1}$ and $a_{2}$. Here I want to share the way how and some statistics of the data.
 
+## Overall Trade network
+
+<img src="images/trade_network_corrected.png" alt="Figure 1: GDP and Trade Network" width="500">
+
 ## Data Construction
 
 ### Trade flows
