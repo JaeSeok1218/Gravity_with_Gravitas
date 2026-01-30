@@ -10,7 +10,7 @@ Since there is no publicly available dataset to replicate [Anderson and van Winc
 
 ### Trade flows
 
-The paper reports estimates of $a_{1}$ and $a_{2}$ for the two-country model, $-0.79$ and $-1.65$, respectively. Given these estimates, I solve the following market-clearing conditions for $ \\{P_{i} \\}$.
+The paper reports estimates of $a_{1}$ and $a_{2}$ for the two-country model, $-0.79$ and $-1.65$, respectively. Given these estimates, I solve the following market-clearing conditions for $ \\{P_{i}\\}$.
 
 $$
 \quad P_{j}^{1-\sigma} = \sum_{i}P_{i}^{\sigma-1}\theta_{i}\exp{\\{a_{1}\ln{d_{ij}} + a_{2}(1-\delta_{ij})\\}}
