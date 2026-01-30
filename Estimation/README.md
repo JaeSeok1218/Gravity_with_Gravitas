@@ -46,10 +46,55 @@ function T = solve_T_system(a1, a2, y, d, delta, n_regions)
     warning('T did not converge');
 end
 ```
+>Note: In order to calculate the multilateral resistance terms, full information for all regions is required. Thus, the integrated region (region 41) must be used to solve for $\\{P_{i}\\}$, while region 41 is excluded from the nonlinear squared estimation.
 
-### 3.
+### 3. Calculate the nonlinear least squares objective
 
-3. Compute $k=E[\ln{z_{ij}}] - E[\text{predicted}]$.
-4. Calculate the nonlinear least squares objective.
-5. If the difference between $\ln{z_{ij}}$ from the data and the prediction is below a tolerance level, stop.
-6. Otherwise, return to step 1.
+Define ```data_opt``` as a data set containing 40 regions.
+
+```matlab
+% Compute residuals
+function residuals = compute_residuals(params, data_opt, y, d, delta, n_regions)
+    % Compute residuals for NLSQ
+    
+    a1 = params(1);
+    a2 = params(2);
+    
+    % Inner loop: Solve for T_i (multilateral resistance)
+    T = solve_T_system(a1, a2, y, d, delta, n_regions);
+    
+    % Compute predicted ln(z_ij)
+    n_obs = size(data_opt,1);
+    predicted = zeros(n_obs, 1);
+    
+    for obs = 1:n_obs
+        i = data_opt.origin_id(obs);
+        j = data_opt.destination_id(obs);
+        
+        predicted(obs) = a1 * data_opt.ln_d(obs) + a2 * (1 - data_opt.border_dummy(obs)) ...
+                        - log(T(i)) - log(T(j));
+    end
+    
+    % Add constant
+    k = mean(data_opt.ln_z) - mean(predicted);
+    predicted = predicted + k;
+    
+    % Return residuals
+    residuals = data_opt.ln_z - predicted;
+end
+```
+
+### 4. If the difference between $\ln{z_{ij}}$ from the data and the prediction is below a tolerance level, stop.
+### 5. Otherwise, return to step 1.
+
+```matlab
+% Define objective function
+objective_fun = @(params) compute_residuals(params, data_opt, y, d, delta, n_regions);
+
+% Run optimization
+tic;
+[params_hat, resnorm, residuals, exitflag, output] = lsqnonlin(...
+    objective_fun, params0, lb, ub, options);
+elapsed = toc;
+```
+
