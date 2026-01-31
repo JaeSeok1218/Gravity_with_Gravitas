@@ -69,7 +69,6 @@ where $\ln{z_{ij}} \equiv \ln{\left(x_{ij}/y_{i}y_{j}\right)}$.
 
 1. Guess values for $a_{1}$ and $a_{2}$
 2. Solve for $\\{P_{i}\\}$ using the market clearing conditions for all $j$.
-3. Compute $k=E[\ln{z_{ij}}] - E[\text{predicted}]$.
-4. Calculate the nonlinear least squares objective.
-5. If the difference between $\ln{z_{ij}}$ from the data and the prediction is below a tolerance level, stop.
-6. Otherwise, return to step 1.
+3. Calculate the nonlinear least squares objective.
+4. If the difference between $\ln{z_{ij}}$ from the data and the prediction is below a tolerance level, stop.
+5. Otherwise, return to step 1.
