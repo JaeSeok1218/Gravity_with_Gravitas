@@ -2,7 +2,7 @@
 
 From the general equilibrium, the paper implement the counterfactual analysis under the borderless setting. If the Canada-US border does not exist anymore, how would the multilateral resistance terms change?
 
-- Code is available [here](Counterfactual/Counterfactual_analysis.m)
+- Code is available [here](https://github.com/JaeSeok1218/Gravity_with_Gravitas/blob/main/Counterfactual/Counterfactual_analysis.m)
 
 ## Counterfactual Equilibrium Condition
 
