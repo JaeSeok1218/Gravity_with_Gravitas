@@ -37,3 +37,9 @@ $$
 </P>
 
 >Note: The results are very close to the results of the paper.
+
+This result exactly corresponds to the implication of the paper:
+
+$$
+dP_{i} = \left(\frac{1}{2}-\theta_{i} + \frac{1}{2}\sum_{k}\theta_{k}^{2}\right)dt
+$$
