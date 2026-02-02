@@ -25,8 +25,9 @@ $$
 $$
 y_{i}^{1,new} = \frac{p_{i}^{1}}{p_{i}^{0}}y_{i}^{0}
 $$
+
 4. If $|y_{i}^{1,old} - y_{i}^{1,new}|$ is smaller than tolerance level, exit. If not, set $y_{i}^{1,old} = y_{i}^{1,new}$ and iterate.
 
 ## Result
 
-<img src="images/Table_Count.png" alt="Table 5: GDP and Trade Network" width="900">
+<img src="images/Table_Count.png" alt="Table 5: GDP and Trade Network" width="400">
