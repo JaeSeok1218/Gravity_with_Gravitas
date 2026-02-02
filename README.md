@@ -3,7 +3,8 @@
 Here, I introduce the paper briefly and replicate its **two-country model** results using **synthetic data**. The data package I use is constructed based on the paper's estimates $a_{1}$ and $a_{2}$.
 
 - Data is available with description [here](https://github.com/JaeSeok1218/Gravity_with_Gravitas/tree/main/Data).
-- Replication code is provided [here](https://github.com/JaeSeok1218/Gravity_with_Gravitas/tree/main/Estimation).
+- Replication procesure is provided [here](https://github.com/JaeSeok1218/Gravity_with_Gravitas/tree/main/Estimation).
+- Counterfacutal analysis code is available [here](https://github.com/JaeSeok1218/Gravity_with_Gravitas/tree/main/Counterfactual).
 
 
 ## Brief Introduction
