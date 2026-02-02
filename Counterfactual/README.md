@@ -2,6 +2,8 @@
 
 From the general equilibrium, the paper implement the counterfactual analysis under the borderless setting. If the Canada-US border does not exist anymore, how would the multilateral resistance terms change?
 
+- Code is available [here](Counterfactual/Counterfactual_analysis.m)
+
 ## Counterfactual Equilibrium Condition
 
 According to _Appendix B_ in the paper, after the removal of the border, the quantities must be the same. Thus, we have
