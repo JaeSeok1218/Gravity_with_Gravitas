@@ -30,16 +30,3 @@ $$
 
 4. If $|y_{i}^{1,old} - y_{i}^{1,new}|$ is smaller than tolerance level, exit. If not, set $y_{i}^{1,old} = y_{i}^{1,new}$ and iterate.
 
-## Result
-
-<p align="center">
-<img src="images/Table_Count.png" alt="Table 5: GDP and Trade Network" width="400">
-</P>
-
->Note: The results are very close to the results of the paper.
-
-This result exactly corresponds to the implication of the paper:
-
-$$
-dP_{i} = \left(\frac{1}{2}-\theta_{i} + \frac{1}{2}\sum_{k}\theta_{k}^{2}\right)dt
-$$

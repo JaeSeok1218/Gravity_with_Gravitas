@@ -73,3 +73,33 @@ where $\ln{z_{ij}} \equiv \ln{\left(x_{ij}/y_{i}y_{j}\right)}$.
 3. Calculate the nonlinear least squares objective.
 4. If the difference between $\ln{z_{ij}}$ from the data and the prediction is below a tolerance level, stop.
 5. Otherwise, return to step 1.
+
+## Counterfactual Analysis: Borderless
+
+To compute the border effect, the paper implements a counterfactual analysis by removing the Canada-US border (i.e., setting $\delta_{ij}=1$, for all $i,j$). The analysis strategy is described in detail [here](https://github.com/JaeSeok1218/Gravity_with_Gravitas/tree/main/Counterfactual).
+
+### Result
+
+<p align="center">
+<img src="images/Table_Count.png" alt="Table 5: GDP and Trade Network" width="400">
+</P>
+
+>Note: The results are very close to the results of the paper. _True_ values refer to the paper's estimates.
+
+### Implications 1: Multilateral Resistance
+
+The magnitude of the numbers reflects the fact that the border effects operating through $dt$ would lead larger impacts on multilateral resistance of a small country than that of a lager country.
+$$
+dP_{i} = \left(\frac{1}{2}-\theta_{i} + \frac{1}{2}\sum_{k}\theta_{k}^{2}\right)dt
+$$
+
+### Implication 2: Border effect on Trade
+
+Based on the result above, the paper decomposes the border effect on bilateral trade flows within and between countries. 
+
+$$
+\begin{align*}
+\ln{z_{ij}} - \ln{\widetilde{z}_{ij}} & = \ln{b_{ij}^{1-\sigma}} - \ln{\left(\frac{P_{i}}{\widetilde{P}_{i}}\right)^{1-\sigma}}- \ln{\left(\frac{P_{j}}{\widetilde{P}_{j}}\right)^{1-\sigma}} \\
+\frac{z_{ij}}{\widtilde{z}_{ij}} & = b_{ij}^{1-\sigma}
+\end{align*}
+$$
