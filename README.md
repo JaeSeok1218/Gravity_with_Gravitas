@@ -86,7 +86,7 @@ To compute the border effect, the paper implements a counterfactual analysis by 
 
 >Note: The results are very close to the results of the paper. _True_ values refer to the paper's estimates.
 
-### Implications 1: Multilateral Resistance
+### Implication 1: Multilateral Resistance
 
 The magnitude of the numbers reflects the fact that the border effects operating through $dt$ would lead larger impacts on multilateral resistance of a small country than that of a lager country.
 $$
